@@ -1,9 +1,20 @@
 {
+  
   "name": "workadventure",
   "private": true,
   "devDependencies": {
-    "husky": "^7.0.1"
+    "husky": "^7.0.1",
+    "lint-staged": "^16.1.5"
   },
+  "lint-staged": {
+  "*.{js,ts,tsx}": [
+    "eslint --fix"
+  ],
+  "*.{js,ts,tsx,json,css,md}": [
+    "prettier --write"
+  ]
+}
+,
   "scripts": {
     "prepare": "husky install || echo 'Husky not found. Maybe you are installing only a subproject.'"
   },
