@@ -30,7 +30,7 @@ WA.room.onEnterZone('police', () => {
         className: "warning",
         callback: (popup) => {
             // Close the popup when the "Close" button is pressed.
-            WA.player.teleport(360, 450, 500);
+            WA.player.teleport(360, 450);
             popup.close();
             currPoliceStation = undefined;
       
