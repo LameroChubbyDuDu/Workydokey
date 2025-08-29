@@ -1,50 +1,10 @@
 let currPoliceStation = undefined;
-const today = new Date();
-const time = today.getHours() + ":" + today.getMinutes();
-// import { getFormResponses } from './Special_Zones.js';
+let escapeMessage = undefined;
+let policePopUp = undefined;
+let PoliceHelp = false;
 
-async function getFormResponses() {
-  const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRetmpP0-lnyYg0TpLuxRQVc8pc5QGUS7dyIRnoeD-ybF_oONKUjspK6Jh9yMjAmUNdzdk7B2-MoONA/pub?gid=0&single=true&output=csv";
-  const response = await fetch(csvUrl);
-  console.log("Fetch status:", response.status);
-
-  const text = await response.text();
-  
-  const rows = text.split("\n").map(r => r.split(","));
-  console.log("form reply：", rows);
-
-  // WA.ui.displayActionMessage({
-  //   message: `最新回覆：${rows[rows.length-1].join(" | ")}`
-  // });
-
-  WA.chat.sendChatMessage(`最新回覆：${rows[rows.length-1].join(" | ")}`, "System");
-}
-
-WA.room.onEnterZone('popup', () => {
-    currPoliceStation =  WA.ui.openPopup("formPopUp",
-      "Here!",[{
-        className: "primary"
-      }]);
-      console.log("In popup zone");
-})
-
-WA.room.onLeaveZone('popup', closePopUp)
-
-
-WA.room.onEnterZone('police', () => {
-    // currPoliceStation =  WA.ui.openPopup("PoliceStation","Magic Boom!",[]);
-    //WA.player.teleport(20, 20, 10);
-
-    // WA.nav.goToRoom("elementary.json");
-    // getFormResponses();
-  //   try {
-  //    getFormResponses();  // await ensures fetch errors show
-  // } catch (err) {
-  //   console.error("Error fetching sheet:", err);
-  // }
-})
-
-WA.room.onLeaveZone('police', closePopUp)
+// import { getFormResponses } from './spreadSheetData.js';
+// import './spreadSheetData.js'
 
 function closePopUp(){
     if (currPoliceStation !== undefined) {
@@ -52,6 +12,40 @@ function closePopUp(){
         currPoliceStation = undefined;
     }
 }
+
+WA.room.onEnterZone('police', () => {
+  console.log("In popup zone");
+  if(currPoliceStation == undefined){
+    currPoliceStation =  WA.ui.openPopup("formPopUp",
+      "你在警察局囉!",[{
+        label: "進入",
+        className: "warning",
+        callback: (popup) => {
+            WA.nav.goToRoom("elementary.json");
+            currPoliceStation = undefined;
+        }
+      },{
+        label: "快逃啊",
+        className: "warning",
+        callback: (popup) => {
+            WA.player.teleport(360, 450);
+            popup.close();
+            currPoliceStation = undefined;
+      
+        }}
+      ]
+    );}
+      
+})
+
+WA.room.onEnterZone('popup', () => {
+    policePopUp =  WA.ui.openPopup("policePopUp",
+      "你迷路啦!找警察幫忙吧",[]);  
+    PoliceHelp = true;
+})
+
+// WA.room.onLeaveZone('police', closePopUp)
+
 
 var prevPosX1 = 1;
 var prevPosY1 = 1;
@@ -75,15 +69,18 @@ WA.onInit().then(async() => {
           { x: prevPosX1, y: prevPosY1, tile: null, layer: "entity" },
           { x: prevPosX2, y: prevPosY2, tile: null, layer: "entity" }
         ]);
-      if(event.direction == "up"){
-        TileSetting(0, 0, 1, 2);
-      }else if(event.direction == "down"){
-        TileSetting(0, 0, -2, -1);
-      }else if(event.direction == "right"){
-        TileSetting(-1, -1, -1, 0);
-        }else{
-        TileSetting(1, 1, -1, 0);
-        }
+      if(event.direction == "up"){ TileSetting(0, 0, 1, 2); }
+      else if(event.direction == "down"){ TileSetting(0, 0, -2, -1); }
+      else if(event.direction == "right"){ TileSetting(-1, -1, -1, 0); }
+      else{ TileSetting(1, 1, -1, 0); }
+
+      if((currPosX == 27 || currPosX == 28)&& (currPosY >= 30 && currPosY <= 34)){
+        console.log("找到警察了");
+        if(policePopUp){
+            policePopUp.close();
+            policePopUp = undefined;
+          }
+      }
 
       console.log("Player moved to: ", currPosX, currPosY);
       //console.log("Prev position are: : ", prevPosX, prevPosY);
