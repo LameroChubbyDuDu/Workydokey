@@ -1,14 +1,23 @@
-// const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRetmpP0-lnyYg0TpLuxRQVc8pc5QGUS7dyIRnoeD-ybF_oONKUjspK6Jh9yMjAmUNdzdk7B2-MoONA/pub?gid=0&single=true&output=csv";
-export async function getFormResponses() {
-  const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRetmpP0-lnyYg0TpLuxRQVc8pc5QGUS7dyIRnoeD-ybF_oONKUjspK6Jh9yMjAmUNdzdk7B2-MoONA/pub?gid=0&single=true&output=csv";
-  const response = await fetch(csvUrl);
-  const text = await response.text();
-  
-  const rows = text.split("\n").map(r => r.split(","));
-  console.log("表單回應：", rows);
-  console.log("Function called");
+import * as XLSX from "xlsx";
+export async function readExcelFile(url) {
+  try {
+    // 下載 xlsx 檔
+    const response = await fetch(url);
+    const arrayBuffer = await response.arrayBuffer();
 
-  // WA.ui.displayActionMessage({
-  //   message: `最新回覆：${rows[rows.length-1].join(" | ")}`
-  // });
+    // 解析 Excel
+    const workbook = XLSX.read(arrayBuffer, { type: "array" });
+
+    // 假設讀第一個工作表
+    const sheetName = workbook.SheetNames[0];
+    const worksheet = workbook.Sheets[sheetName];
+
+    // 轉 JSON
+    const data = XLSX.utils.sheet_to_json(worksheet);
+    console.log("Excel data:", data);
+
+    return data;
+  } catch (err) {
+    console.error("讀取 Excel 發生錯誤:", err);
+  }
 }
