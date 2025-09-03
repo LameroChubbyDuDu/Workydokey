@@ -1,7 +1,8 @@
 let currPoliceStation = undefined;
 let escapeMessage = undefined;
 let policePopUp = undefined;
-let PoliceHelp = false;
+let PoliceHelp = 0;
+let policeHelpPopUp = undefined;
 
 var pos = new Array(6); // [prevPosX1, prevPosY1, prevPosX2, prevPosY2, currPosX, currPosY]
 
@@ -36,15 +37,10 @@ WA.room.onEnterZone('police', () => {
       
 })
 
-WA.room.onEnterZone('popup', () => {
-    policePopUp =  WA.ui.openPopup("policePopUp",
-      "你迷路啦!找警察幫忙吧",[]);  
-    PoliceHelp = true;
-})
 
 // Waiting for the API to be ready
 WA.onInit().then(async() => {
-  await getFormResponses();
+  // await getFormResponses();
 
   console.log('Position: ', await WA.player.getPosition());
   WA.player.onPlayerMove((event) => {
@@ -60,6 +56,17 @@ WA.onInit().then(async() => {
       else{ TileSetting(1, 1, -1, 0); }
 
       if((pos[4] == 27 || pos[4] == 28)&& (pos[5] >= 30 && pos[5] <= 34)){
+      //   if(PoliceHelp == 1){
+      //     policeHelpPopUp =  WA.ui.openPopup("policePopUp",
+      // "你迷路啦!找警察幫忙吧","直走右轉就可以看到左鎮國小囉!",[{
+      //   label: "進入",
+      //   className: "warning",
+      //   callback: (popup) => {
+      //       policeHelpPopUp = undefined;
+      //       popup.close();
+      //   }
+      // }]);  
+      //   }
         console.log("找到警察了");
         if(policePopUp){
             policePopUp.close();
@@ -91,6 +98,13 @@ WA.onInit().then(async() => {
     bellSound.stop({});
   });
 }).catch(e => console.error(e));
+
+WA.room.onEnterZone('popup', () => {
+    policePopUp =  WA.ui.openPopup("policePopUp",
+      "你迷路啦!找警察幫忙吧",[]);  
+    PoliceHelp = 1;
+})
+
 
 function TileSetting(addX1, addX2, addY1, addY2){
   WA.room.setTiles([

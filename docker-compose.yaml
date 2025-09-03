@@ -181,6 +181,11 @@ services:
       - "traefik.http.routers.play-ws.service=play-ws"
       - "traefik.http.services.play-ws.loadbalancer.server.port=3001"
 
+        # 👇 middleware to add CORS header
+      # - "traefik.http.middlewares.cors-header.headers.accessControlAllowOrigin=*"
+      # - "traefik.http.middlewares.cors-header.headers.accessControlAllowMethods=GET,OPTIONS"
+      # - "traefik.http.routers.play.middlewares=cors-header@docker"
+
   maps:
     image: thecodingmachine/php:8.1-v4-apache-node12
     environment:
