@@ -1,5 +1,4 @@
 import { Interaction } from './function/interaction.js';
-import { readExcelFile } from './spreadSheetData.js';
 
 const interaction = new Interaction();
 

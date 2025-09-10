@@ -1,0 +1,377 @@
+{ "compressionlevel":-1,
+ "height":9,
+ "infinite":false,
+ "layers":[
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":9,
+         "id":2,
+         "name":"people",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":9,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[708, 709, 710, 711, 712, 713, 714, 715, 716,
+            726, 727, 728, 729, 730, 731, 732, 733, 734,
+            744, 745, 746, 747, 748, 749, 750, 751, 752,
+            762, 763, 764, 765, 766, 767, 768, 769, 770,
+            780, 781, 782, 783, 784, 785, 786, 787, 788,
+            798, 799, 800, 801, 802, 803, 804, 805, 806,
+            816, 817, 818, 819, 820, 821, 822, 823, 824,
+            834, 835, 836, 837, 838, 839, 840, 841, 842,
+            852, 853, 854, 855, 856, 857, 858, 859, 860],
+         "height":9,
+         "id":1,
+         "name":"bg",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":9,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[0, 0, 0, 0, 0, 172, 172, 172, 172,
+            0, 0, 0, 0, 0, 172, 172, 172, 172,
+            0, 0, 0, 0, 0, 172, 172, 172, 172,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":9,
+         "id":3,
+         "name":"tv sound",
+         "opacity":1,
+         "properties":[
+                {
+                 "name":"bellSound",
+                 "type":"string",
+                 "value":"https:\/\/lamerochubbydudu.github.io\/gather_test\/bell.mp3"
+                }, 
+                {
+                 "name":"bellVariable",
+                 "type":"string",
+                 "value":"tv"
+                }, 
+                {
+                 "name":"soundRadius",
+                 "type":"string",
+                 "value":"200"
+                }, 
+                {
+                 "name":"tv",
+                 "type":"bool",
+                 "value":true
+                }],
+         "type":"tilelayer",
+         "visible":true,
+         "width":9,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
+         "id":4,
+         "name":"floorLayer",
+         "objects":[
+                {
+                 "height":95.0636233103926,
+                 "id":2,
+                 "name":"tv",
+                 "properties":[
+                        {
+                         "name":"zone",
+                         "type":"string",
+                         "value":"tv"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":127.068376491558,
+                 "x":160.023765905828,
+                 "y":-0.316878744367975
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":5,
+ "nextobjectid":3,
+ "orientation":"orthogonal",
+ "properties":[
+        {
+         "name":"mapCopyright",
+         "type":"string",
+         "value":"Credits: Valdo Romao https:\/\/www.linkedin.com\/in\/valdo-romao\/ \nLicense: CC-BY-SA 3.0 (http:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/)"
+        }, 
+        {
+         "name":"mapDescription",
+         "type":"string",
+         "value":"A perfect virtual office to get started with WorkAdventure!"
+        }, 
+        {
+         "name":"mapImage",
+         "type":"string",
+         "value":"map.png"
+        }, 
+        {
+         "name":"mapLink",
+         "type":"string",
+         "value":"https:\/\/thecodingmachine.github.io\/workadventure-map-starter-kit\/map.json"
+        }, 
+        {
+         "name":"mapName",
+         "type":"string",
+         "value":"Starter kit"
+        }, 
+        {
+         "name":"script",
+         "type":"string",
+         "value":".\/storeEvent.js"
+        }],
+ "renderorder":"right-down",
+ "tiledversion":"1.11.2",
+ "tileheight":32,
+ "tilesets":[
+        {
+         "columns":9,
+         "firstgid":1,
+         "image":"..\/assets\/store_1.jpeg",
+         "imageheight":300,
+         "imagewidth":300,
+         "margin":0,
+         "name":"jen store",
+         "spacing":0,
+         "tilecount":81,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":9,
+         "firstgid":82,
+         "image":"..\/assets\/store_1.jpeg",
+         "imageheight":300,
+         "imagewidth":300,
+         "margin":1,
+         "name":"jen store 2",
+         "spacing":1,
+         "tilecount":81,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":6,
+         "firstgid":163,
+         "image":"..\/assets\/Special_Zones.png",
+         "imageheight":64,
+         "imagewidth":192,
+         "margin":0,
+         "name":"special zone",
+         "spacing":0,
+         "tilecount":12,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":1,
+         "firstgid":175,
+         "image":"..\/assets\/farmer.png",
+         "imageheight":64,
+         "imagewidth":32,
+         "margin":0,
+         "name":"man",
+         "spacing":0,
+         "tilecount":2,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":9,
+         "firstgid":177,
+         "image":"..\/assets\/tv1.png",
+         "imageheight":300,
+         "imagewidth":300,
+         "margin":0,
+         "name":"tv1",
+         "spacing":0,
+         "tilecount":81,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":9,
+         "firstgid":258,
+         "image":"..\/assets\/tv2.png",
+         "imageheight":300,
+         "imagewidth":300,
+         "margin":0,
+         "name":"tv2",
+         "spacing":0,
+         "tilecount":81,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":9,
+         "firstgid":339,
+         "image":"..\/assets\/tv3.png",
+         "imageheight":300,
+         "imagewidth":300,
+         "margin":0,
+         "name":"tv3",
+         "spacing":0,
+         "tilecount":81,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":12,
+         "firstgid":420,
+         "image":"..\/assets\/tvSet-02-01.png",
+         "imageheight":400,
+         "imagewidth":400,
+         "margin":1,
+         "name":"tv set 1",
+         "spacing":1,
+         "tilecount":144,
+         "tileheight":32,
+         "tilewidth":32
+        }, 
+        {
+         "columns":12,
+         "firstgid":564,
+         "image":"..\/assets\/tvSet-02-01.png",
+         "imageheight":400,
+         "imagewidth":400,
+         "margin":1,
+         "name":"tv set 1",
+         "spacing":1,
+         "tilecount":144,
+         "tileheight":32,
+         "tiles":[
+                {
+                 "animation":[
+                        {
+                         "duration":100,
+                         "tileid":6
+                        }],
+                 "id":0
+                }],
+         "tilewidth":32
+        },
+    
+        {
+         "columns":18,
+         "firstgid":708,
+         "image":"..\/assets\/jenStore_tv_animation-09-01.jpg",
+         "imageheight":600,
+         "imagewidth":600,
+         "margin":1,
+         "name":"jen store animation",
+         "spacing":1,
+         "tilecount":324,
+         "tileheight":32,
+         "tiles":[
+                {
+                 "animation":[
+                        {
+                         "duration":650,
+                         "tileid":6
+                        }, 
+                        {
+                         "duration":650,
+                         "tileid":15
+                        }, 
+                        {
+                         "duration":650,
+                         "tileid":168
+                        }, 
+                        {
+                         "duration":650,
+                         "tileid":177
+                        }],
+                 "id":6
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":650,
+                         "tileid":7
+                        }, 
+                        {
+                         "duration":650,
+                         "tileid":16
+                        }, 
+                        {
+                         "duration":650,
+                         "tileid":169
+                        }, 
+                        {
+                         "duration":650,
+                         "tileid":178
+                        }],
+                 "id":7
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":650,
+                         "tileid":24
+                        }, 
+                        {
+                         "duration":650,
+                         "tileid":33
+                        }, 
+                        {
+                         "duration":650,
+                         "tileid":186
+                        }, 
+                        {
+                         "duration":650,
+                         "tileid":195
+                        }],
+                 "id":24
+                }, 
+                {
+                 "animation":[
+                        {
+                         "duration":650,
+                         "tileid":25
+                        }, 
+                        {
+                         "duration":650,
+                         "tileid":34
+                        }, 
+                        {
+                         "duration":650,
+                         "tileid":187
+                        }, 
+                        {
+                         "duration":650,
+                         "tileid":196
+                        }],
+                 "id":25
+                }],
+         "tilewidth":32
+        }],
+ "tilewidth":32,
+ "type":"map",
+ "version":"1.10",
+ "width":9
+}

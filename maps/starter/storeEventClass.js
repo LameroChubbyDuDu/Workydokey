@@ -10,48 +10,9 @@ export class Interaction {
         console.log("Entered zone:", zoneName);
         WA.room.onEnterZone(zoneName, () => {
             switch (zoneName) {
-                case "bellZone": {
+                case "tv": {
                     console.log("Enter bell zone");
                     this.bellSound.play({});
-                    WA.ui.modal.openModal({
-                        title: "WorkAdventure website",
-                        src: 'iframe/menu.html',
-                        position: "center",
-                        allowFullScreen: false
-                    });
-                    break;
-                }
-                case "police": {
-                    console.log("Enter police zone");
-                    if (this.currPoliceStation == undefined) {
-                        this.currPoliceStation = WA.ui.openPopup("formPopUp",
-                            "你在警察局囉!", [{
-                                label: "進入",
-                                className: "warning",
-                                callback: (popup) => {
-                                    WA.nav.goToRoom("elementary.json");
-                                    this.currPoliceStation = undefined;
-                                    popup.close();
-                                }
-                            }, {
-                                label: "快逃啊",
-                                className: "warning",
-                                callback: (popup) => {
-                                    WA.player.teleport(360, 450);
-                                    popup.close();
-                                    this.currPoliceStation = undefined;
-                                    
-                                }
-                            }
-                        ]
-                        );
-                    }
-                    break;
-                }
-                case "popup": {
-                    console.log("Enter poup");
-                    this.policePopUp = WA.ui.openPopup("policePopUp",
-                        "你迷路啦!找警察幫忙吧", []);
                     break;
                 }
                 default: {
