@@ -13,9 +13,162 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0,
             0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":9,
+         "id":5,
+         "name":"block",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":9,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[163, 163, 163, 163, 163, 163, 163, 163, 163,
+            163, 163, 163, 163, 163, 0, 0, 0, 0,
+            0, 163, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 163, 163, 163, 163, 0,
+            0, 0, 0, 0, 163, 163, 163, 163, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 163, 163, 163, 163, 163, 163, 0,
+            0, 0, 163, 163, 163, 163, 163, 163, 0],
+         "height":9,
+         "id":7,
+         "name":"collision",
+         "opacity":1,
+         "properties":[
+                {
+                 "name":"collides",
+                 "type":"bool",
+                 "value":true
+                }],
+         "type":"tilelayer",
+         "visible":true,
+         "width":9,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 164, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":9,
+         "id":6,
+         "name":"start",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":9,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[0, 0, 0, 0, 0, 172, 172, 172, 172,
+            0, 0, 0, 0, 0, 172, 172, 172, 172,
+            0, 0, 0, 0, 0, 172, 172, 172, 172,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":9,
+         "id":3,
+         "name":"tv sound",
+         "opacity":1,
+         "properties":[
+                {
+                 "name":"bellSound",
+                 "type":"string",
+                 "value":"https:\/\/lamerochubbydudu.github.io\/gather_test\/tv.mp3"
+                }, 
+                {
+                 "name":"bellVariable",
+                 "type":"string",
+                 "value":"tv"
+                }, 
+                {
+                 "name":"soundRadius",
+                 "type":"string",
+                 "value":"200"
+                }, 
+                {
+                 "name":"tv",
+                 "type":"bool",
+                 "value":true
+                }],
+         "type":"tilelayer",
+         "visible":true,
+         "width":9,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":9,
          "id":2,
          "name":"people",
          "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":9,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":9,
+         "id":8,
+         "name":"people",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":9,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 166, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0],
+         "height":9,
+         "id":10,
+         "name":"info",
+         "opacity":1,
+         "properties":[
+                {
+                 "name":"zone",
+                 "type":"string",
+                 "value":"info"
+                }],
          "type":"tilelayer",
          "visible":true,
          "width":9,
@@ -43,47 +196,6 @@
          "y":0
         }, 
         {
-         "data":[0, 0, 0, 0, 0, 172, 172, 172, 172,
-            0, 0, 0, 0, 0, 172, 172, 172, 172,
-            0, 0, 0, 0, 0, 172, 172, 172, 172,
-            0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0, 0, 0, 0, 0],
-         "height":9,
-         "id":3,
-         "name":"tv sound",
-         "opacity":1,
-         "properties":[
-                {
-                 "name":"bellSound",
-                 "type":"string",
-                 "value":"https:\/\/lamerochubbydudu.github.io\/gather_test\/bell.mp3"
-                }, 
-                {
-                 "name":"bellVariable",
-                 "type":"string",
-                 "value":"tv"
-                }, 
-                {
-                 "name":"soundRadius",
-                 "type":"string",
-                 "value":"200"
-                }, 
-                {
-                 "name":"tv",
-                 "type":"bool",
-                 "value":true
-                }],
-         "type":"tilelayer",
-         "visible":true,
-         "width":9,
-         "x":0,
-         "y":0
-        }, 
-        {
          "draworder":"topdown",
          "id":4,
          "name":"floorLayer",
@@ -104,6 +216,23 @@
                  "width":127.068376491558,
                  "x":160.023765905828,
                  "y":-0.316878744367975
+                }, 
+                {
+                 "height":52.2849928207159,
+                 "id":3,
+                 "name":"info",
+                 "properties":[
+                        {
+                         "name":"zone",
+                         "type":"string",
+                         "value":"info"
+                        }],
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":63.0588701292271,
+                 "x":32.0047531811655,
+                 "y":43.4123879784126
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -111,8 +240,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":5,
- "nextobjectid":3,
+ "nextlayerid":11,
+ "nextobjectid":4,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -186,6 +315,16 @@
          "spacing":0,
          "tilecount":12,
          "tileheight":32,
+         "tiles":[
+                {
+                 "id":0,
+                 "properties":[
+                        {
+                         "name":"collides",
+                         "type":"bool",
+                         "value":true
+                        }]
+                }],
          "tilewidth":32
         }, 
         {

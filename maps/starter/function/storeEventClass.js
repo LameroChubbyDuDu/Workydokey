@@ -1,8 +1,8 @@
-export class Interaction {
+export class storeInteraction {
     constructor() {
         this.currPoliceStation = undefined;
         this.policePopUp = undefined;
-        this.bellSound = WA.sound.loadSound("https:\/\/lamerochubbydudu.github.io\/gather_test\/bell.mp3");
+        this.bellSound = WA.sound.loadSound("https:\/\/lamerochubbydudu.github.io\/gather_test\/tv.mp3");
         this.pos = new Array(6); // [prevPosX1, prevPosY1, prevPosX2, prevPosY2, currPosX, currPosY]
     }
 
@@ -11,8 +11,18 @@ export class Interaction {
         WA.room.onEnterZone(zoneName, () => {
             switch (zoneName) {
                 case "tv": {
-                    console.log("Enter bell zone");
+                    console.log("Enter tv zone");
                     this.bellSound.play({});
+                    break;
+                }
+                case "info": {
+                    console.log("Enter info zone");
+                    WA.ui.modal.openModal({
+                        title: "WorkAdventure website",
+                        src: 'iframe/jenStore.html',
+                        position: "center",
+                        allowFullScreen: false
+                    });
                     break;
                 }
                 default: {
@@ -25,7 +35,7 @@ export class Interaction {
 
         WA.room.onLeaveZone(zoneName, () => {
             switch (zoneName) {
-                case "bellZone": {
+                case "tv": {
                     this.bellSound.stop({});
                     break;
                 }
